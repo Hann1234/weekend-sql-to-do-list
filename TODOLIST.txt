@@ -22,11 +22,11 @@ To Do:
         [x] npm install pg 
         [x] .gitignore
         [] edit README file?
-        [] weekend-to-do-app.sql 
+        [x] weekend-to-do-app.sql 
         [x] server folder
             [x] modules folder  
                 [x] pool.js
-            [] public folder
+            [x] public folder
                 [x] scripts folder
                     [x] client.js
                 [x] styles folder   
@@ -38,16 +38,16 @@ To Do:
                     [x] router.js
             [x] server.js
     
-    [] Create Database
-        [] start up sql 
-        [] create weekend-to-do-app database in postico
-            [] CREATE TABLE list (
+    [x Create Database
+        [x] start up sql 
+        [x] create weekend-to-do-app database in postico
+            [x] CREATE TABLE list (
 	            "id" serial PRIMARY KEY,
 	            "task" varchar(250),
 	            "completed" varchar(1),
 	            "notes" varchar(250)
                 );
-            [] create weekend-to-do-app.sql 
+            [x] create weekend-to-do-app.sql 
     
     [] Create front end
         [] create html in public folder

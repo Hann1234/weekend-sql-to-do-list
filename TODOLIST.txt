@@ -51,11 +51,11 @@ To Do:
     
     [] Create front end
         [] create html in public folder
-            [] script
-                [] vendors/jquery
-                [] sweetalert2
-                [] scripts/client
-            [] link styles/style
+            [x] script
+                [x] vendors/jquery
+                [x] sweetalert2
+                [x] scripts/client
+            [x] link styles/style
             [] create header (TO DO LIST) within body
             [] main 
                 [] h2 add task

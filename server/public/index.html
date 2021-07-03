@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Challenge 3: SQL To-Do List</title>
+    <script src="vendors/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <!-- Sweet Alert 2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>TO DO LIST</h1>
+    </header>
+    <main>
+        <form id="addTask">
+            <h2>Add Task</h2>
+            <label for="nameIn">Name: <!--Added labels for accessibility-->
+                <input id="nameIn" type="text" minlength="1" maxlength="250" class="form-input"/>
+            </label>
+            <label for="notesIn">Notes:
+                <input id="notesIn" type="text" minlength="1" maxlength="250" class="form-input"/>
+            </label>
+          <button type="button" id="addButton">Add Task</button>
+        </form>
+        <section>
+          <h2>Tasks</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Notes</th>
+                <th>Completed?</th>
+                <th>Complete</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="viewTasks"></tbody>
+          </table>
+        </section>
+      </main>
+      <footer>
+        <h5>A CH Creation</h5>
+      </footer>
+</body>
+</html>

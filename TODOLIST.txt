@@ -38,7 +38,7 @@ To Do:
                     [x] router.js
             [x] server.js
     
-    [x Create Database
+    [x] Create Database
         [x] start up sql 
         [x] create weekend-to-do-app database in postico
             [x] CREATE TABLE list (
@@ -49,20 +49,20 @@ To Do:
                 );
             [x] create weekend-to-do-app.sql 
     
-    [] Create front end
-        [] create html in public folder
+    [x] Create front end
+        [x] create html in public folder
             [x] script
                 [x] vendors/jquery
                 [x] sweetalert2
                 [x] scripts/client
             [x] link styles/style
-            [] create header (TO DO LIST) within body
+            [x] create header (TO DO LIST) within body
             [] main 
-                [] h2 add task
-                    [] create labels and inputs (task name and notes)
-                    [] create add task button
-                [] h2 Tasks
-                    [] create table with columns Task, notes, completed?, complete, delete.
+                [x] h2 add task
+                    [x] create labels and inputs (task name and notes)
+                    [x] create add task button
+                [x] h2 Tasks
+                    [x] create table with columns Task, notes, completed?, complete, delete.
                         - table info and toggle complete and delete buttons to be appended in 
     
     []  POST - INSERT: Add a task to the database when new task is created

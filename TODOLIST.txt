@@ -17,26 +17,26 @@ Tasks:
 To Do:
 
     [] Create files
-        [] npm init --yes
-        [] npm install express
-        [] npm install pg 
-        [] .gitignore
+        [x] npm init --yes
+        [x] npm install express
+        [x] npm install pg 
+        [x] .gitignore
         [] edit README file?
         [] weekend-to-do-app.sql 
-        [] server folder
-            [] modules folder  
-                [] pool.js
+        [x] server folder
+            [x] modules folder  
+                [x] pool.js
             [] public folder
-                [] scripts folder
-                    [] client.js
-                [] styles folder   
-                    [] style.css 
-                [] vendors folder   
-                   [] jQuery file 
-                [] index.html 
-            [] routes folder
-                    [] router.js
-            [] server.js
+                [x] scripts folder
+                    [x] client.js
+                [x] styles folder   
+                    [x] style.css 
+                [x] vendors folder   
+                   [x] jQuery file 
+                [x] index.html 
+            [x] routes folder
+                    [x] router.js
+            [x] server.js
     
     [] Create Database
         [] start up sql 

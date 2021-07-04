@@ -7,7 +7,7 @@ const taskRouter = express.Router();
 
 taskRouter.get('/', (req, res) => {
     //create variable to hold SQL query
-    let queryText = 'SELECT * FROM "list" ORDER BY "id" DEC;';
+    let queryText = 'SELECT * FROM "list" ORDER BY "id" DESC;';
     //make SQL query to DB
     pool.query(queryText)
     .then(result => {

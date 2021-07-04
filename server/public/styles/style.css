@@ -7,8 +7,8 @@ body {
 
 /* styling paper */
 #paper {
-    width: 600px;
-    height: 700px;
+    width: auto;
+    height: auto;
     position: relative;
     margin: 20px auto;
     padding-top: 40px;
@@ -47,10 +47,12 @@ body {
 }
 
 table {
+    width: auto;
+    height: auto;
     margin: auto;
     border-collapse: collapse;
     background-color: white;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 table, th, td {

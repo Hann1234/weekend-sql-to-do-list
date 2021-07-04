@@ -16,12 +16,12 @@ Tasks:
 
 To Do:
 
-    [] Create files
+    [x] Create files
         [x] npm init --yes
         [x] npm install express
         [x] npm install pg 
         [x] .gitignore
-        [] edit README file?
+        [x] edit README file?
         [x] weekend-to-do-app.sql 
         [x] server folder
             [x] modules folder  

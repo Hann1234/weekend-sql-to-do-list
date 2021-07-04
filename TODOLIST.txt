@@ -81,10 +81,10 @@ To Do:
     [x] DELETE - DELETE: Delete a task from the DOM and database
         [x] confirm alert using sweetalert2 before deleting
 
-    [] CSS Styling:
-        [] change background color of page
-        [] font family and size
-        [] text color & or background color of tasks to show whether or not they are completed
+    [x] CSS Styling:
+        [x] change background color of page
+        [x] font family and size
+        [x] text color & or background color of tasks to show whether or not they are completed
 
 Stretch Goals:
 
@@ -98,9 +98,9 @@ Stretch Goals:
             [] Inputs -- make your text inputs styled in the bootstrap way
             [] Responsive -- make your app responsive to different screen sizes -- check out the Layout section
 
-    [] feature-confirm-delete
-        [] In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
-        [] Some styled options are Bootstrap Modal or Sweet Alerts: Use the CDN option.
+    [x] feature-confirm-delete
+        [x] In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
+        [x] Some styled options are Bootstrap Modal or Sweet Alerts: Use the CDN option.
 
     [] feature-ordering-task-query
         [] Research Query Params to have the request reverse the order of the returned todos.

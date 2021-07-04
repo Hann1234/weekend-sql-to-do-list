@@ -1,5 +1,7 @@
 $(document).ready(onReady);
 console.log('JS');
+// let bootstrapButton = $.fn.deleteButton.noConflict(); //trying to get delete button to use bootstrap
+// $.fn.deleteButton = bootstrapButton;
 
 function clearInputs(){ //clears inputs
     $('#taskIn').val('');
@@ -23,10 +25,10 @@ function getList() { //makes an ajax call to server to get the list
                         <td>${task.notes}</td>
                         <td>${task.completed}</td>
                         <td>
-                            <button id="completeButton" data-id="${task.id}">Complete</button>
+                            <button type="button" class="btn btn-success id="completeButton" data-id="${task.id}">Complete</button>
                         </td>
                         <td>
-                            <button id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
+                            <button type="button" class="btn btn-danger" id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
                         </td>
                     </tr>
                 `)
@@ -38,7 +40,7 @@ function getList() { //makes an ajax call to server to get the list
                         <td>${task.completed}</td>
                         <td>Completed!</td>
                         <td>
-                             <button id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
+                             <button type="button" class="btn btn-danger" id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
                         </td>
                     </tr>
                 `)

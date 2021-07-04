@@ -57,7 +57,7 @@ To Do:
                 [x] scripts/client
             [x] link styles/style
             [x] create header (TO DO LIST) within body
-            [] main 
+            [x] main 
                 [x] h2 add task
                     [x] create labels and inputs (task name and notes)
                     [x] create add task button
@@ -67,10 +67,10 @@ To Do:
     
     []  POST - INSERT: Add a task to the database when new task is created
 
-    []  GET - SELECT: Get tasks from database and refresh page to display tasks
-        [] append updated info to DOM
-        [] create complete button for PUT/UPDATE using data-id
-            [] complete button should only appear for tasks that are not completed 
+    [x]  GET - SELECT: Get tasks from database and refresh page to display tasks
+        [x] append updated info to DOM
+        [x] create complete button for PUT/UPDATE using data-id
+            [x] complete button should only appear for tasks that are not completed 
     
     [] PUT - UPDATE: Update completed status from in database when "complete" button clicked
         [] clicking complete should change visual representation on front end   

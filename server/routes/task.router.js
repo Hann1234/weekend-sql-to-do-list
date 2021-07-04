@@ -18,3 +18,24 @@ taskRouter.get('/', (req, res) => {
         res.sendStatus(500);
     });
 });
+
+// POST - INSERT: Adding task to database
+
+taskRouter.post('/', (req, res) => {
+    const newTask = req.body;
+    const queryText = `
+    INSERT INTO list ("task", "notes", "completed")
+    VALUES ($1, $2, $3);
+    `;
+    pool.query(queryText, [newTask.task, newKoala.notes, newKoala.completed])
+        .then((result) => {
+            res.sendStatus(201);
+        })
+        .catch((err) => {
+            console.log(`Error making query ${queryText}`, err);
+            res.sendStatus(500);
+        });
+});
+
+// INSERT INTO list ("task", "notes", "completed")
+// VALUES ('Take out trash.', 'Do this before it gets stinky!', 'Y')

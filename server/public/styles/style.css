@@ -73,6 +73,31 @@ table, th, td {
     font-size: 14px;
 }
 
+#completeButton {
+    background-color: green;
+    border-style: outset;
+    border-width: medium;
+    border-color: lightgreen;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+#deleteButton {
+    background-color: red;
+    border-style: outset;
+    border-width: medium;
+    border-color: salmon;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
 .yes {
     background-color: lightgreen;
+}
+
+.no {
+    background-color: lightyellow;
+
 }

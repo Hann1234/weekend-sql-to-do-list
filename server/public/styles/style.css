@@ -17,3 +17,7 @@ table, th, td {
 #addButton {
     margin: 10px 0 0 0;
 }
+
+.yes {
+    background-color: green;
+}

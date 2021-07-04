@@ -18,7 +18,7 @@ function getList() { //makes an ajax call to server to get the list
         for (const task of response) {
             if(`${task.completed}` == `N`){
                 $('#viewTasks').append(`
-                    <tr>
+                    <tr class="no">
                         <td>${task.name}</td>
                         <td>${task.notes}</td>
                         <td>${task.completed}</td>
@@ -32,7 +32,7 @@ function getList() { //makes an ajax call to server to get the list
                 `)
             }else if(`${task.completed}` == `Y`){
                 $('#viewTasks').append(`
-                    <tr>
+                    <tr class="yes">
                         <td>${task.name}</td>
                         <td>${task.notes}</td>
                         <td>${task.completed}</td>

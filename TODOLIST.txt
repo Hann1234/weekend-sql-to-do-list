@@ -73,10 +73,10 @@ To Do:
             [x] complete button should only appear for tasks that are not completed 
     
     [] PUT - UPDATE: Update completed status from in database when "complete" button clicked
-        [] clicking complete should change visual representation on front end   
-                [] change background color of task container to green
-                [] change complete section from N to Y (create actual checkmark? add to stretch)
-                [] id will be 'completedButton', use data-id to target task's table id
+        [x] clicking complete should change visual representation on front end   
+                [x] change background color of task container to green
+                [x] change complete section from N to Y (create actual checkmark? add to stretch)
+                [x] id will be 'completeButton', use data-id to target task's table id
     
     [] DELETE - DELETE: Delete a task from the DOM and database
         [] confirm alert using sweetalert2 before deleting

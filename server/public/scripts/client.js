@@ -45,7 +45,7 @@ function getList() { //makes an ajax call to server to get the list
             }
         }
       }).catch(error => {
-      console.log('Error rendering Koala info to DOM', error);
+      console.log('Error appending tasks into DOM', error);
       })
 }
 
@@ -55,7 +55,7 @@ function getList() { //makes an ajax call to server to get the list
 
     //click listener for adding task goes here
 
-    getList();
+    getList(); //GETs tasks from database
 
     
   }

@@ -1,11 +1,11 @@
 const pool = require('../modules/pool');
 const express = require('express');
 const { Pool } = require('pg');
-const router = express.Router();
+const taskRouter = express.Router();
 
 // GET TABLE INFO
 
-router.get('/', (req, res) => {
+taskRouter.get('/', (req, res) => {
     //create variable to hold SQL query
     let queryText = 'SELECT * FROM "list";';
     //make SQL query to DB

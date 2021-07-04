@@ -27,7 +27,7 @@ taskRouter.post('/', (req, res) => {
     INSERT INTO list ("task", "notes", "completed")
     VALUES ($1, $2, $3);
     `;
-    pool.query(queryText, [newTask.task, newKoala.notes, newKoala.completed])
+    pool.query(queryText, [newTask.task, newTask.notes, newTask.completed])
         .then((result) => {
             res.sendStatus(201);
         })

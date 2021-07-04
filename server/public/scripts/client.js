@@ -54,9 +54,9 @@ function addTask() { //adds a task to database when add task button is clicked
     // validate inputs
     if (!$('#taskIn').val()) {
       Swal.fire({
-        'Unable to add task.',
-        'Please add a task name.',
-        'error'
+        title: 'Unable to add task.',
+        text: 'Please add a task name.',
+        icon: 'error'
       })
         return;
     }
@@ -80,7 +80,7 @@ function saveTask(newTask) {
       url: '/tasks',
       data: newTask,
     }).then( (response) => {
-      clearInput();
+      clearInputs();
       getList();
     })
   }
@@ -125,7 +125,7 @@ function saveTask(newTask) {
         if (result.isConfirmed) {
           Swal.fire(
             'Deleted!',
-            'Your file has been deleted.',
+            'Your task has been deleted.',
             'success'
           );
 
@@ -140,10 +140,10 @@ function saveTask(newTask) {
           .catch((error) => {
             alert(`There was a problem deleting the task. Please try again.`);
           });
+        }
           else {
             return;
           }
-        }
       });
   }
 
@@ -156,9 +156,8 @@ function saveTask(newTask) {
     //click listeners go here
     $('#addButton').on('click', addTask);
     $('table').on("click", '#completeButton', taskCompletedHandler);
+    $('#viewTasks').on('click','#deleteButton', deleteTaskHandler);
 
-    
-    
-  }
+  };
   
 

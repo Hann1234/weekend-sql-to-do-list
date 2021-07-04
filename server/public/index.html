@@ -13,38 +13,44 @@
 
 </head>
 <body>
-    <header>
-        <h1>TO DO LIST</h1>
-    </header>
-    <main>
-        <form id="addTask">
-            <h2>Add Task</h2>
-            <label for="taskIn">Task Name: <!--Added labels for accessibility-->
-                <input id="taskIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter task here"/>
-            </label>
-            <label for="notesIn">Notes:
-                <input id="notesIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter notes here"/>
-            </label>
-          <button type="button" id="addButton">Add Task</button>
-        </form>
-        <section>
-          <h2>Tasks</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Task</th>
-                <th>Notes</th>
-                <th>Completed?</th>
-                <th>Complete Task</th>
-                <th>Delete Task</th>
-              </tr>
-            </thead>
-            <tbody id="viewTasks"></tbody>
-          </table>
-        </section>
-      </main>
-      <footer>
-        <h5>A CH Creation</h5>
-      </footer>
+    <div id="paper">
+        <div id="pattern">
+          <div id="content">
+            <header>
+                <h1>TO DO LIST</h1>
+            </header>
+            <main>
+                <form id="addTask">
+                    <h2>Add Task</h2>
+                    <label for="taskIn">Task Name: <!--Added labels for accessibility-->
+                        <input id="taskIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter task here"/><br>
+                    </label> 
+                    <label for="notesIn">Notes:
+                        <input id="notesIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter notes here"/><br>
+                    </label>
+                <button type="button" id="addButton">Add Task</button>
+                </form>
+                <section>
+                <h2>Tasks</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Notes</th>
+                        <th>Completed?</th>
+                        <th>Complete Task</th>
+                        <th>Delete Task</th>
+                    </tr>
+                    </thead>
+                    <tbody id="viewTasks"></tbody>
+                </table>
+                </section>
+            </main>
+            <footer>
+                <h5>A CH Creation</h5>
+            </footer>
+        </div>
+    </div>
+  </div>
 </body>
 </html>

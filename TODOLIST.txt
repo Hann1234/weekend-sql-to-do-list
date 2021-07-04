@@ -65,7 +65,7 @@ To Do:
                     [x] create table with columns Task, notes, completed?, complete, delete.
                         - table info and toggle complete and delete buttons to be appended in 
     
-    []  POST - INSERT: Add a task to the database when new task is created
+    [x]  POST - INSERT: Add a task to the database when new task is created
 
     [x]  GET - SELECT: Get tasks from database and refresh page to display tasks
         [x] append updated info to DOM

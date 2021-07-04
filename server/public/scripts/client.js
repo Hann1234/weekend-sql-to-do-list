@@ -49,7 +49,7 @@ function getList() { //makes an ajax call to server to get the list
       })
 }
 
-function addTask() {
+function addTask() { //adds a task to database when add task button is clicked
     console.log( 'in addButton on click' );
     // validate inputs
     if (!$('#taskIn').val()) {

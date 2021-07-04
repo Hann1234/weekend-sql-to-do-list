@@ -39,3 +39,20 @@ taskRouter.post('/', (req, res) => {
 
 // INSERT INTO list ("task", "notes", "completed")
 // VALUES ('Take out trash.', 'Do this before it gets stinky!', 'Y')
+
+//PUT to update completed status
+
+taskRouter.put('/:id', (req, res) => {
+    const taskId = req.params.id;
+    let queryText = `UPDATE "list" SET "completed"='Y' WHERE id=$1;`;
+
+    pool.query(queryText, [taskId])
+    .then(dbResponse => {
+        console.log('Updated Task Status:', dbResponse.rowCount);
+        res.sendStatus(202);
+    })
+    .catch(error => {
+        console.log('There was an error updating the table', error);
+        res.sendStatus(500);
+    });
+})

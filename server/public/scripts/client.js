@@ -85,14 +85,35 @@ function saveTask(newTask) {
     })
   }
 
+  //PUT - UPDATE when task completed button is clicked
+
+  function taskCompletedHandler() {
+      taskCompleted($(this).data('id'));
+  }
+
+  function taskCompleted (taskId) {
+    $.ajax({
+      method: 'PUT',
+      url: `/tasks/${taskId}`
+    })
+    .then ((response)=>{
+      console.log('Task update:', response);
+      getList(); // updates DOM
+    })
+    .catch (error =>{
+      alert('Something went wrong', error);
+    });
+  }
+
 
   function onReady() { //runs when page loads and sets up listeners for clicks
     console.log('JQ');
     clearInputs();
     getList(); //GETs tasks from database
 
-    //click listener for adding task goes here
-    $('#addButton').on('click', addTask());
+    //click listeners go here
+    $('#addButton').on('click', addTask);
+    $('table').on("click", '#completeButton', taskCompletedHandler);
 
     
     

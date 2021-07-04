@@ -20,29 +20,29 @@ function getList() { //makes an ajax call to server to get the list
         for (const task of response) {
             if(`${task.completed}` == `N`){
                 $('#viewTasks').append(`
-                    <tr class="no">
-                        <td>${task.task}</td>
-                        <td>${task.notes}</td>
-                        <td>${task.completed}</td>
-                        <td>
+                    <div class="row" class="no">
+                        <div class="col">${task.task}</div>
+                        <div class="col">${task.notes}</div>
+                        <div class="col">${task.completed}</div>
+                        <div class="col">
                             <button type="button" class="btn btn-success id="completeButton" data-id="${task.id}">Complete</button>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="col">
                             <button type="button" class="btn btn-danger" id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
-                        </td>
-                    </tr>
+                        </div>
+                    </div>
                 `)
             }else if(`${task.completed}` == `Y`){
                 $('#viewTasks').append(`
-                    <tr class="yes">
-                        <td>${task.task}</td>
-                        <td>${task.notes}</td>
-                        <td>${task.completed}</td>
-                        <td>Completed!</td>
-                        <td>
-                             <button type="button" class="btn btn-danger" id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
-                        </td>
-                    </tr>
+                    <div class="row" class="yes">
+                        <div class="col">${task.task}</div>
+                        <div class="col">${task.notes}</div>
+                        <div class="col">${task.completed}</div>
+                        <div class="col">Completed!</div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger" id="deleteButton" data-id="${task.id}" data-name="${task.name}">Delete</button>
+                        </div>
+                    </div>
                 `)
             }
         }
@@ -91,6 +91,7 @@ function saveTask(newTask) {
 
   function taskCompletedHandler() {
       taskCompleted($(this).data('id'));
+      console.log('click on complete works');
   }
 
   function taskCompleted (taskId) {
@@ -157,7 +158,7 @@ function saveTask(newTask) {
 
     //click listeners go here
     $('#addButton').on('click', addTask);
-    $('table').on("click", '#completeButton', taskCompletedHandler);
+    $('div').on('click', '#completeButton', taskCompletedHandler);
     $('#viewTasks').on('click','#deleteButton', deleteTaskHandler);
 
   };

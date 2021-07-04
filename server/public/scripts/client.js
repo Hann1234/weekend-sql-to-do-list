@@ -2,7 +2,7 @@ $(document).ready(onReady);
 console.log('JS');
 
 function clearInputs(){ //clears inputs
-    $('#nameIn').val('');
+    $('#taskIn').val('');
     $('#notesIn').val('');
   }
 
@@ -19,7 +19,7 @@ function getList() { //makes an ajax call to server to get the list
             if(`${task.completed}` == `N`){
                 $('#viewTasks').append(`
                     <tr class="no">
-                        <td>${task.name}</td>
+                        <td>${task.task}</td>
                         <td>${task.notes}</td>
                         <td>${task.completed}</td>
                         <td>
@@ -33,7 +33,7 @@ function getList() { //makes an ajax call to server to get the list
             }else if(`${task.completed}` == `Y`){
                 $('#viewTasks').append(`
                     <tr class="yes">
-                        <td>${task.name}</td>
+                        <td>${task.task}</td>
                         <td>${task.notes}</td>
                         <td>${task.completed}</td>
                         <td>Completed!</td>
@@ -49,14 +49,52 @@ function getList() { //makes an ajax call to server to get the list
       })
 }
 
+function addTask() {
+    console.log( 'in addButton on click' );
+    // validate inputs
+    if (!$('#taskIn').val()) {
+      Swal.fire({
+        'Unable to add task.',
+        'Please add a task name.',
+        'error'
+      })
+        return;
+    }
+
+    // get user input and put in an object
+
+    let newTask = {
+        task: $('#taskIn').val(),
+        notes: $('#notesIn').val(),
+        completed: 'N',
+      };
+
+      saveTask(newTask);
+}
+
+function saveTask(newTask) {
+    console.log('in saveTask', newTask);
+    // ajax call to server to POST tasks
+    $.ajax({
+      type: 'POST',
+      url: '/tasks',
+      data: newTask,
+    }).then( (response) => {
+      clearInput();
+      getList();
+    })
+  }
+
+
   function onReady() { //runs when page loads and sets up listeners for clicks
     console.log('JQ');
     clearInputs();
-
-    //click listener for adding task goes here
-
     getList(); //GETs tasks from database
 
+    //click listener for adding task goes here
+    $('#addButton').on('click', addTask());
+
+    
     
   }
   

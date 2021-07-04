@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekend Challenge 3: SQL To-Do List</title>
     <script src="vendors/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Sweet Alert 2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
@@ -20,16 +21,16 @@
                 <h1>TO DO LIST</h1>
             </header>
             <main>
-                <form id="addTask">
                     <h2>Add Task</h2>
-                    <label for="taskIn">Task Name: <!--Added labels for accessibility-->
-                        <input id="taskIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter task here"/><br>
-                    </label> 
-                    <label for="notesIn">Notes:
-                        <input id="notesIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter notes here"/><br>
-                    </label>
-                <button type="button" id="addButton">Add Task</button>
-                </form>
+                    <div class="input-group flex-nowrap"> <!--Unable to get bootstrap input wrapping to work...-->
+                        <span class="input-group-text" id="addon-wrapping">Task Name</span>
+                            <input id="taskIn" type="text" minlength="1" maxlength="250" class="form-control" placeholder="enter task here" aria-label="enter task here"/>
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">Task Notes</span>
+                            <input id="notesIn" type="text" minlength="1" maxlength="250" class="form-input" placeholder="enter notes here" aria-label="enter notes here"/>
+                    </div>
+                        <button type="button" id="addButton">Add Task</button>
                 <section>
                 <h2>Tasks</h2>
                 <table>

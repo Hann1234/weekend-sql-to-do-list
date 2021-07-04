@@ -56,3 +56,29 @@ taskRouter.put('/:id', (req, res) => {
         res.sendStatus(500);
     });
 })
+
+//DELETE - DELETE: Delete a task from the to do list
+
+taskRouter.delete('/:id', (req, res) => {
+    console.log('Request URL: ', req.url);
+    console.log('Request route parameters: ', req.params);
+    const taskId = req.params.id;
+    console.log(`Task ID is: ${taskId}`);
+
+    // creates string to delete task
+    const queryText = `
+    DELETE FROM list WHERE id = $1
+    `;
+
+    pool.query(queryText, [taskId])
+        .then(dbResponse => {
+            console.log('How many rows deleted:', dbResponse.rowsCount);
+            res.sendStatus(200);
+        })
+        .catch(error => {
+            console.log(`ERROR! Unable to delete Task with id ${taskId}. Error: ${error}`);
+            res.sendStatus(500);
+        });
+});
+
+module.exports = taskRouter;

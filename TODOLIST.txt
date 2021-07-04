@@ -72,7 +72,7 @@ To Do:
         [x] create complete button for PUT/UPDATE using data-id
             [x] complete button should only appear for tasks that are not completed 
     
-    [] PUT - UPDATE: Update completed status from in database when "complete" button clicked
+    [x] PUT - UPDATE: Update completed status from in database when "complete" button clicked
         [x] clicking complete should change visual representation on front end   
                 [x] change background color of task container to green
                 [x] change complete section from N to Y (create actual checkmark? add to stretch)

@@ -105,6 +105,48 @@ function saveTask(newTask) {
     });
   }
 
+  //DELETE TASK:
+
+  function deleteTaskHandler() {
+    deleteTask($(this).data('id'));
+  }
+
+  function deleteTask(taskId) {
+      //SweetAlert to confirm delete
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          );
+
+          $.ajax({
+            method: 'DELETE',
+            url: `/tasks/${taskId}`
+          })
+          .then(response => {
+            console.log('task deleted');
+            getList(); // displays updated table list without deleted task
+          })
+          .catch((error) => {
+            alert(`There was a problem deleting the task. Please try again.`);
+          });
+          else {
+            return;
+          }
+        }
+      });
+  }
+
 
   function onReady() { //runs when page loads and sets up listeners for clicks
     console.log('JQ');

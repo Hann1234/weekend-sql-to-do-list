@@ -80,8 +80,8 @@ function saveTask(newTask) {
       url: '/tasks',
       data: newTask,
     }).then( (response) => {
+      getList();      
       clearInputs();
-      getList();
     })
   }
 
